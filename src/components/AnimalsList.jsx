@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const AnimalsList = ({ animalsArray }) => {
     const [sortQ, setSortQ] = useState("");
-    const sortedAnimalsArray = (sortQ === ("asc" || "desc"))
+    const sortedAnimalsArray = sortQ
         ? [...animalsArray]
             .sort((a, b) => sortQ === "asc" ? a.price - b.price : b.price - a.price)
         : animalsArray;
@@ -65,9 +65,10 @@ const AnimalsList = ({ animalsArray }) => {
                             </p>
 
 
-                            {/* <p className="text-base font-bold text-green-600 mb-3">
+                            <p className="text-base font-bold text-green-600 mb-3">
                                 ৳{animal.price.toLocaleString()}
-                            </p> */}
+                            </p>
+
                             <div className="card-actions justify-center">
                                 <Link
                                     href={`/animals/${animal.id}`}
