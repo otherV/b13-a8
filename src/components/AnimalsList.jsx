@@ -25,11 +25,10 @@ const AnimalsList = ({ animalsArray }) => {
                     <select
                         className="select select-accent select-md text-xs font-bold uppercase"
                         defaultValue="Sort by Price"
-                        onChange={(e) => setSortQ(e.target.value)}
                     >
                         <option disabled={true}>Sort by Price</option>
-                        <option value="asc">Price: Low to High</option>
-                        <option value="desc">Price: High to Low</option>
+                        <option onClick={()=>setSortQ("asc")}>Price: Low to High</option>
+                        <option onClick={()=>setSortQ("desc")}>Price: High to Low</option>
                     </select>
 
                 </div>
