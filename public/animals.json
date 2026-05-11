@@ -61,7 +61,7 @@
         "age": 2,
         "location": "Pabna",
         "description": "Jamunapari is a large-breed goat known for its impressive size and meaty build. This one is farm-raised with premium feed, fully vaccinated and vet-checked.",
-        "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80",
+        "image": "https://images.unsplash.com/photo-1588466585717-f8041aec7875?w=600&q=80",
         "category": "Small Animal"
     },
     {
@@ -74,7 +74,7 @@
         "age": 2,
         "location": "Dhaka",
         "description": "A Boer hybrid goat with exceptional meat yield. One of the most sought-after breeds for Qurbani due to its heavy body weight. Raised in a commercial farm with top-tier care.",
-        "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=600&q=80",
+        "image": "https://images.unsplash.com/photo-1604076150017-48b528308aa3?w=600&q=80",
         "category": "Small Animal"
     },
     {
@@ -87,7 +87,7 @@
         "age": 3,
         "location": "Mymensingh",
         "description": "Hariana breed bull with a lean and muscular frame. Known for high-quality meat. Raised on a mix of natural grass and protein-rich feed. Fully healthy and active.",
-        "image": "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600&q=80",
+        "image": "https://images.unsplash.com/photo-1603104147308-73891c6be078?w=600&q=80",
         "category": "Large Animal"
     },
     {
@@ -100,7 +100,7 @@
         "age": 1,
         "location": "Chattogram",
         "description": "Sirohi breed goat with a sturdy build and high adaptability. Commonly used for Qurbani due to its good meat ratio. Farm-raised, vaccinated, and ready for the season.",
-        "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&q=80",
+        "image": "https://images.unsplash.com/photo-1608153929527-23b9758b401d?w=600&q=80",
         "category": "Small Animal"
     }
 ]
