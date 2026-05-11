@@ -1,11 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import animalDB from "@/utils/animalDB";
 
 const FeaturedAnimals = async () => {
-    const res = await fetch("http://localhost:3000/animals.json", {
-        cache: "force-cache",
-    });
-    const animals = await res.json();
+    const animals = await animalDB.queryAll();
     const featured = animals.slice(0, 4);
 
     return (

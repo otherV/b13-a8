@@ -15,8 +15,10 @@ const NavBar = () => {
                         <Image
                             src={logoSm}
                             alt={`logo`}
-                            width={100}
-                            height={100}
+                            width={`auto`}
+                            height={`auto`}
+                            className="w-20"
+                            priority
                         />
                         <h1 className="text-5xl font-medium text-[#606568] uppercase">
                             Qurbani Hat
@@ -49,8 +51,8 @@ const NavBar = () => {
                                     <Image
                                         alt="profile"
                                         src={logoSm}
-                                        width={40}
-                                        height={40}
+                                        width={`auto`}
+                                        height={`auto`}
                                     />
                                 </div>
                             </div>

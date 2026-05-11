@@ -75,7 +75,7 @@ const Footer = () => {
 
 
                 <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs">
-                    <p>Copyright © {new Date().getFullYear()} QurbaniHat. All Rights Reserved.</p>
+                    <p>Copyright © {new Date().getFullYear()} Qurbani Hat. All Rights Reserved.</p>
                     <p>Developed by <Link
                         href="https://github.com/otherV"
                         target="_blank"
