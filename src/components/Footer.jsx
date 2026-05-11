@@ -4,8 +4,8 @@ import logoSm from '@/assets/logo.png';
 
 const Footer = () => {
     return (
-        <div className='bg-[black] text-base-100'>
-            <div className='container mx-auto max-w-7/10'>
+        <div className='bg-[black] text-base-100 px-20'>
+            
                 <div className='flex flex-col items-center gap-3 mt-20 mb-4'>
                     <div className="">
                         <Image
@@ -30,7 +30,7 @@ const Footer = () => {
                         <a className='' href="">Cookies</a>
                     </div>
                 </div>
-            </div>
+            
         </div>
     );
 };
