@@ -2,7 +2,7 @@ import { LuPhone } from "react-icons/lu";
 
 const Hotline = () => {
     return (
-        <section className="py-16 border-t-2 border-gray-100 text-center">
+        <section className="pt-16 pb-32 text-center">
             <h2 className="text-2xl font-black uppercase text-gray-800 mb-6">
                 Hotline
             </h2>

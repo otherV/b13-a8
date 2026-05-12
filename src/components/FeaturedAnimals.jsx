@@ -11,14 +11,14 @@ const FeaturedAnimals = async () => {
 
             <div className="flex justify-between items-center mb-8">
                 <div>
-                    <h2 className="text-2xl font-black uppercase text-gray-800 border-b-3 border-green-600 pb-0.5">
+                    <h2 className="w-fit text-2xl font-black uppercase text-gray-800 border-b-3 border-green-600 pb-0.5">
                         Featured Animals
                     </h2>
 
                 </div>
                 <Link
                     href="/animals"
-                    className="text-xs font-bold uppercase text-green-600 border-b-2 border-green-600 pb-0.5"
+                    className="w-fit text-xs font-bold uppercase text-green-600 border-b-2 border-green-600 pb-0.5"
                 >
                     View All →
                 </Link>
