@@ -61,7 +61,7 @@ const FeaturedAnimals = async () => {
                             </p> */}
                             <div className="card-actions justify-center">
                                 <Link
-                                    href={`/animals/${animal.id}`}
+                                    href={`/details-page/${animal.id}`}
                                     className="block w-full text-center bg-green-600 hover:bg-green-700 text-white text-[11px] font-bold uppercase py-2 rounded-lg transition-colors"
                                 >
                                     See Details

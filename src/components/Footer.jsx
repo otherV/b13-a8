@@ -20,7 +20,7 @@ const Footer = () => {
                             className="h-auto w-auto mb-4"
                         />
                         <p className="text-sm mb-4">
-                            <span className="font-bold text-white">QurbaniHat</span> is a modern livestock marketplace connecting buyers with verified sellers across Bangladesh for a hassle-free Qurbani experience.
+                            <span className="font-bold text-white">Qurbani Hat</span> is a modern livestock marketplace connecting buyers with verified sellers across Bangladesh for a hassle-free Qurbani experience.
                         </p>
 
                         <div className="flex gap-3 mt-4">

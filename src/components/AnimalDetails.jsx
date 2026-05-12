@@ -1,10 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { LuMapPin, LuWeight, LuCalendar, LuDna } from "react-icons/lu";
 
 const AnimalDetails = ({ animal }) => {
+    const [bookForm, setBookForm] = useState({ name: "", email: "", phone: "", address: "" });
+
+    const handleChange = (e) => {
+        setBookForm({
+            ...bookForm,
+            [e.target.name]: e.target.value
+        });
+    };
 
     return (
         <section className="container mx-auto max-w-7/10 py-16">
@@ -93,11 +102,14 @@ const AnimalDetails = ({ animal }) => {
                         <form onSubmit={(e) => {
                             e.preventDefault();
                             toast.success("Booking confirmed!");
+                            setBookForm({ name: "", email: "", phone: "", address: "" });
                         }} className="flex flex-col gap-3">
                             <input
                                 type={`text`}
                                 name={`name`}
                                 placeholder={`Full Name`}
+                                value={bookForm[`name`]}
+                                onChange={handleChange}
                                 required
                                 className="input input-bordered input-sm w-full text-sm"
                             />
@@ -105,6 +117,8 @@ const AnimalDetails = ({ animal }) => {
                                 type={`email`}
                                 name={`email`}
                                 placeholder={`Email Address`}
+                                value={bookForm[`email`]}
+                                onChange={handleChange}
                                 required
                                 className="input input-bordered input-sm w-full text-sm"
                             />
@@ -112,6 +126,8 @@ const AnimalDetails = ({ animal }) => {
                                 type={`tel`}
                                 name={`phone`}
                                 placeholder={`Phone Number`}
+                                value={bookForm[`phone`]}
+                                onChange={handleChange}
                                 required
                                 className="input input-bordered input-sm w-full text-sm"
                             />
@@ -119,6 +135,8 @@ const AnimalDetails = ({ animal }) => {
                                 type={`text`}
                                 name={`address`}
                                 placeholder={`Delivery Address`}
+                                value={bookForm[`address`]}
+                                onChange={handleChange}
                                 required
                                 className="input input-bordered input-sm w-full text-sm"
                             />
