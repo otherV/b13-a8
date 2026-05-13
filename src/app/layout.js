@@ -29,11 +29,7 @@ export default function RootLayout({ children }) {
     >
       <body className="bg-[#fefefd] min-h-screen flex flex-col">
         <NavBar />
-
-
         {children}
-
-
         <Footer />
         <ToastContainer position="top-center" />
       </body>

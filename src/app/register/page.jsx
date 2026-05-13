@@ -56,7 +56,7 @@ const RegisterPage = () => {
     }
 
     return (
-        <section className="py-16 container mx-auto max-w-md px-4">
+        <section className="flex-1 flex flex-col justify-center py-16 container mx-auto max-w-md px-4">
 
             <div className="flex justify-center items-center">
                 <h2 className="w-fit text-2xl font-black uppercase text-gray-800 border-b-3 border-green-600 pb-0.5 mb-4">
@@ -115,10 +115,6 @@ const RegisterPage = () => {
                     onClick={() => signIn.social({
                         provider: "google",
                         callbackURL: "/",
-                    }, {
-                        onError: ({ error }) => {
-                            //toast.error(error.message);
-                        },
                     })}
                     className="btn btn-outline w-full flex items-center gap-2 font-bold uppercase text-xs">
                     <Image src={googleIcon} alt="Google" width={16} height={16} />

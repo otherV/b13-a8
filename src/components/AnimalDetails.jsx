@@ -16,7 +16,8 @@ const AnimalDetails = ({ animal }) => {
     };
 
     return (
-        <section className="container mx-auto max-w-7/10 py-16 px-4">
+        <section className="flex-1 flex flex-col justify-start container mx-auto max-w-7/10 py-16 px-4">
+
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
 
                 <div className="lg:col-span-3 space-y-6">
@@ -149,6 +150,7 @@ const AnimalDetails = ({ animal }) => {
 
                 </div>
             </div>
+            
         </section>
     );
 };

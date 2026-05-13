@@ -23,7 +23,7 @@ const ProfilePage = () => {
     
 
     return (
-        <section className="py-16 container mx-auto max-w-md px-4">
+        <section className="flex-1 flex flex-col justify-start py-16 container mx-auto max-w-md px-4">
             <div className="flex justify-center items-center">
                 <h2 className="w-fit text-2xl font-black uppercase text-gray-800 border-b-3 border-green-600 pb-0.5 mb-4">
                     My Profile

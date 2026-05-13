@@ -7,16 +7,18 @@ import TopBreeds from "@/components/TopBreeds";
 
 const HomePage = () => {
   return (
-    <>
-      <Banner />
-      <div className="container mx-auto max-w-7/10">
-        <StatBar />
-        <FeaturedAnimals />
-        <QurbaniTips />
-        <TopBreeds />
-        <Hotline />
+    <div className="flex-1 flex flex-col justify-start">
+      <div>
+        <Banner />
+        <div className="container mx-auto max-w-7/10">
+          <StatBar />
+          <FeaturedAnimals />
+          <QurbaniTips />
+          <TopBreeds />
+          <Hotline />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
