@@ -16,17 +16,16 @@ const AnimalDetails = ({ animal }) => {
     };
 
     return (
-        <section className="container mx-auto max-w-7/10 py-16">
-            <div className="grid grid-cols-5 gap-10">
+        <section className="container mx-auto max-w-7/10 py-16 px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
 
-
-                <div className="col-span-3 space-y-6">
-                    <div className="relative w-full h-105 rounded-xl overflow-hidden">
+                <div className="lg:col-span-3 space-y-6">
+                    <div className="relative w-full h-72 lg:h-105 rounded-xl overflow-hidden">
                         <Image
                             src={animal.image}
                             alt={animal.name}
                             fill
-                            sizes={60}
+                            sizes="(max-width: 1024px) 100vw, 60vw"
                             className="object-cover"
                             priority
                         />
@@ -34,8 +33,7 @@ const AnimalDetails = ({ animal }) => {
                     <h1 className="text-lg text-gray-500 text-center">{animal.description}</h1>
                 </div>
 
-
-                <div className="col-span-2 flex flex-col gap-6">
+                <div className="lg:col-span-2 flex flex-col gap-6">
 
 
                     <div>

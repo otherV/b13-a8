@@ -156,7 +156,13 @@ const NavBar = () => {
                                         <div className="divider my-1" />
                                         <li><Link href="/my-profile">My Profile</Link></li>
                                         <li>
-                                            <button onClick={() => signOut()} className="text-red-500">Logout</button>
+                                            <button onClick={() => signOut({
+                                                fetchOptions: {
+                                                    onSuccess: () => {
+                                                        router.push("/");
+                                                    },
+                                                },
+                                            })} className="text-red-500">Logout</button>
                                         </li>
                                     </>
                                 ) : (

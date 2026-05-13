@@ -35,7 +35,7 @@ const QurbaniTips = () => {
                 Qurbani Tips
             </h2>
 
-            <div className="grid grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {tips.map((tip) => (
                     <div
                         key={tip.number}

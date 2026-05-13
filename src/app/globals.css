@@ -2,5 +2,5 @@
 @plugin "daisyui";
 
 .shadowOverlay {
-  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.40), rgba(0,0,0,0.15));
+  background: linear-gradient(to right, rgba(2, 44, 18, 0.95), rgba(2, 44, 18, 0.30));
 }

@@ -1,28 +1,32 @@
 "use client";
 import { useState } from "react";
 import { useSession, updateUser } from "@/utils/auth-client";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { LuUser, LuImage } from "react-icons/lu";
 
 const UpdateProfilePage = () => {
-    const { data: session, isPending } = useSession();
     const router = useRouter();
     const [updateForm, setUpdateForm] = useState({ name: "", image: "" });
 
+    const { data: session, isPending } = useSession();
+    //if (!session) notFound();
+    if (!session) redirect(`/login`);
     if (isPending) return (
         <div className="flex-1 flex justify-center items-center">
-            <span className="loading loading-bars loading-lg text-green-600" />
+            <span className="loading loading-bars loading-xs text-green-600"></span>
+            <span className="loading loading-bars loading-sm text-green-600"></span>
+            <span className="loading loading-bars loading-md text-green-600"></span>
+            <span className="loading loading-bars loading-lg text-green-600"></span>
+            <span className="loading loading-bars loading-xl text-green-600"></span>
         </div>
     );
-
-    if (!session) return null;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         await updateUser({
-            name: updateForm.name,
-            image: updateForm.image,
+            name: updateForm.name || undefined,
+            image: updateForm.image || undefined,
         }, {
             onSuccess: () => {
                 toast.success("Profile updated!");
@@ -35,7 +39,7 @@ const UpdateProfilePage = () => {
     };
 
     return (
-        <section className="py-16 container mx-auto max-w-2/10">
+        <section className="py-16 container mx-auto max-w-md px-4">
             <div className="flex justify-center items-center">
                 <h2 className="w-fit text-2xl font-black uppercase text-gray-800 border-b-3 border-green-600 pb-0.5 mb-4">
                     Update Profile

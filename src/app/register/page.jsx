@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { signUp, signIn } from "@/utils/auth-client";
-import { useRouter } from "next/navigation";
+import { useSession, signUp, signIn } from "@/utils/auth-client";
+import { redirect, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,6 +12,19 @@ const RegisterPage = () => {
     const router = useRouter();
     const [regForm, setRegForm] = useState({ name: "", email: "", image: "", password: "" });
 
+    const { data: session, isPending } = useSession();
+    //if (session) notFound();
+    if (session) redirect(`/`);
+    if (isPending) return (
+        <div className="flex-1 flex justify-center items-center">
+            <span className="loading loading-bars loading-xs text-green-600"></span>
+            <span className="loading loading-bars loading-sm text-green-600"></span>
+            <span className="loading loading-bars loading-md text-green-600"></span>
+            <span className="loading loading-bars loading-lg text-green-600"></span>
+            <span className="loading loading-bars loading-xl text-green-600"></span>
+        </div>
+    );
+
     const handleRegister = async (e) => {
         e.preventDefault();
         await signUp.email(
@@ -20,15 +33,11 @@ const RegisterPage = () => {
                 email: regForm.email,
                 password: regForm.password,
                 image: regForm.image,
-                //callbackURL: "/login",
             },
             {
                 onSuccess: () => {
                     toast.success("Account created!");
-                    setTimeout(
-                        () => router.push("/login"),
-                        1500
-                    );
+                    router.push("/login");
                 },
                 onError: ({ error }) => {
                     toast.error(error.message);
@@ -47,7 +56,7 @@ const RegisterPage = () => {
     }
 
     return (
-        <section className="py-16 container mx-auto max-w-2/10">
+        <section className="py-16 container mx-auto max-w-md px-4">
 
             <div className="flex justify-center items-center">
                 <h2 className="w-fit text-2xl font-black uppercase text-gray-800 border-b-3 border-green-600 pb-0.5 mb-4">
@@ -105,7 +114,11 @@ const RegisterPage = () => {
                 <button
                     onClick={() => signIn.social({
                         provider: "google",
-                        callbackURL: "/"
+                        callbackURL: "/",
+                    }, {
+                        onError: ({ error }) => {
+                            //toast.error(error.message);
+                        },
                     })}
                     className="btn btn-outline w-full flex items-center gap-2 font-bold uppercase text-xs">
                     <Image src={googleIcon} alt="Google" width={16} height={16} />

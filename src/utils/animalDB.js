@@ -1,4 +1,4 @@
-const DEPLOY_PATH = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+const DEPLOY_PATH = process.env.NEXT_PUBLIC_BASE_URL;
 
 const animalDB = {
   queryAll: async () => {

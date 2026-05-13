@@ -1,22 +1,29 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { useSession } from "@/utils/auth-client";
 import { LuUser, LuMail, LuPencil } from "react-icons/lu";
 
 const ProfilePage = () => {
-    const { data: session, isPending } = useSession();
 
+
+    const { data: session, isPending } = useSession();
+    //if (!session) notFound();
+    if (!session) redirect(`/login`);
     if (isPending) return (
         <div className="flex-1 flex justify-center items-center">
-            <span className="loading loading-bars loading-lg text-green-600" />
+            <span className="loading loading-bars loading-xs text-green-600"></span>
+            <span className="loading loading-bars loading-sm text-green-600"></span>
+            <span className="loading loading-bars loading-md text-green-600"></span>
+            <span className="loading loading-bars loading-lg text-green-600"></span>
+            <span className="loading loading-bars loading-xl text-green-600"></span>
         </div>
     );
-
-    if (!session) return null;
+    
 
     return (
-        <section className="py-16 container mx-auto max-w-2/10">
+        <section className="py-16 container mx-auto max-w-md px-4">
             <div className="flex justify-center items-center">
                 <h2 className="w-fit text-2xl font-black uppercase text-gray-800 border-b-3 border-green-600 pb-0.5 mb-4">
                     My Profile

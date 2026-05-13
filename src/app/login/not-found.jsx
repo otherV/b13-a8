@@ -12,8 +12,8 @@ const NotFound = () => {
                 <p className="animate__animated animate__fadeInUp animate__delay-1s text-gray-400 uppercasetext-sm">
                     This page wandered off the farm
                 </p>
-                <Link href="/animals" className="bg-green-600 hover:bg-green-700 text-white font-bold uppercase text-sm px-6 py-3 rounded-lg transition-colors">
-                    All Animals
+                <Link href="/" className="bg-green-600 hover:bg-green-700 text-white font-bold uppercase text-sm px-6 py-3 rounded-lg transition-colors">
+                    Back to Home
                 </Link>
             </div>
         </div>

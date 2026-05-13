@@ -9,6 +9,7 @@ export const auth = betterAuth({
     database: mongodbAdapter(db, { client }),
     emailAndPassword: {
         enabled: true,
+        autoSignIn: false
     },
     baseURL: process.env.BETTER_AUTH_URL,
     socialProviders: {
