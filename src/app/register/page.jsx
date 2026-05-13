@@ -102,7 +102,12 @@ const RegisterPage = () => {
 
                 <div className="divider text-xs text-gray-400">OR</div>
 
-                <button className="btn btn-outline w-full flex items-center gap-2 font-bold uppercase text-xs">
+                <button
+                    onClick={() => signIn.social({
+                        provider: "google",
+                        callbackURL: "/"
+                    })}
+                    className="btn btn-outline w-full flex items-center gap-2 font-bold uppercase text-xs">
                     <Image src={googleIcon} alt="Google" width={16} height={16} />
                     Continue with Google
                 </button>
