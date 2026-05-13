@@ -2,7 +2,7 @@ const DEPLOY_PATH = process.env.NEXT_PUBLIC_BASE_URL;
 
 const animalDB = {
   queryAll: async () => {
-    const res = await fetch(`${DEPLOY_PATH}/animals.json`, { cache: "no-cache" });
+    const res = await fetch(`${DEPLOY_PATH}/animals.json`, { cache: "force-cache" });
     return res.json();
   },
 

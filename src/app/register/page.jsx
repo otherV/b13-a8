@@ -13,8 +13,6 @@ const RegisterPage = () => {
     const [regForm, setRegForm] = useState({ name: "", email: "", image: "", password: "" });
 
     const { data: session, isPending } = useSession();
-    //if (session) notFound();
-    if (session) redirect(`/`);
     if (isPending) return (
         <div className="flex-1 flex justify-center items-center">
             <span className="loading loading-bars loading-xs text-green-600"></span>
@@ -24,6 +22,8 @@ const RegisterPage = () => {
             <span className="loading loading-bars loading-xl text-green-600"></span>
         </div>
     );
+    //if (session) notFound();
+    if (session) redirect(`/`);
 
     const handleRegister = async (e) => {
         e.preventDefault();

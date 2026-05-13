@@ -13,8 +13,6 @@ const LoginPage = () => {
     const [loginForm, setLoginForm] = useState({ email: "", password: "" });
 
     const { data: session, isPending } = useSession();
-    //if (session) notFound();
-    if (session) redirect(`/`);
     if (isPending) return (
         <div className="flex-1 flex justify-center items-center">
             <span className="loading loading-bars loading-xs text-green-600"></span>
@@ -24,6 +22,8 @@ const LoginPage = () => {
             <span className="loading loading-bars loading-xl text-green-600"></span>
         </div>
     );
+    //if (session) notFound();
+    if (session) redirect(`/`);
 
     const handleChange = (e) => {
         setLoginForm({
