@@ -18,7 +18,7 @@ const NavBar = () => {
                 <div className="flex-1">
                     <Link href="/" className="flex items-center gap-3">
                         <Image src={logoSm} alt="logo" width={60} height={60} className="w-14 h-auto" priority />
-                        <h1 className="text-2xl font-black text-[#606568] uppercase">Qurbani Hat</h1>
+                        <h1 className="text-2xl font-black text-[#606568] uppercase">QurbaniHat</h1>
                     </Link>
                 </div>
 
@@ -91,7 +91,7 @@ const NavBar = () => {
                             <div className="flex-1 flex justify-center">
                                 <Link href="/" className="flex items-center gap-2">
                                     <Image src={logoSm} alt="logo" width={40} height={40} className="w-10 h-auto" priority />
-                                    <h1 className="text-lg font-black text-[#606568] uppercase">Qurbani Hat</h1>
+                                    <h1 className="text-lg font-black text-[#606568] uppercase">QurbaniHat</h1>
                                 </Link>
                             </div>
                             <div className="flex-none">

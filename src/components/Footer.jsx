@@ -20,7 +20,7 @@ const Footer = () => {
                             className="h-auto w-auto mb-4"
                         />
                         <p className="text-sm mb-4">
-                            <span className="font-bold text-white">Qurbani Hat</span> is a modern livestock marketplace connecting buyers with verified sellers across Bangladesh for a hassle-free Qurbani experience.
+                            <span className="font-bold text-white">QurbaniHat</span> is a modern livestock marketplace connecting buyers with verified sellers across Bangladesh for a hassle-free Qurbani experience.
                         </p>
 
                         <div className="flex gap-3 mt-4">
@@ -75,7 +75,7 @@ const Footer = () => {
 
 
                 <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs">
-                    <p>Copyright © {new Date().getFullYear()} Qurbani Hat. All Rights Reserved.</p>
+                    <p>Copyright © {new Date().getFullYear()} QurbaniHat. All Rights Reserved.</p>
                     <p>Developed by <Link
                         href="https://github.com/otherV"
                         target="_blank"

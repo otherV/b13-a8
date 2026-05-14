@@ -23,7 +23,7 @@ const Banner = () => {
                             Livestock Marketplace
                         </p>
                         <h1 className="text-6xl font-black text-white uppercase mb-3 animate__animated animate__fadeInLeft">
-                            Qurbani Hat
+                            QurbaniHat
                         </h1>
                         <p className="text-base text-white/75 uppercase">
                             Premium Cattle. Modern Market. <br />
